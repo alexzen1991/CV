@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae - Profesional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        if (localStorage.getItem('dark-mode') === 'enabled') {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    
+    <!-- Contenedor Principal -->
+    <div class="max-w-4xl mx-auto px-6 py-10">
+        <!-- Modo Oscuro -->
+        <div class="flex justify-end">
+            <button id="theme-toggle" class="p-2 rounded bg-gray-200 dark:bg-gray-700">🌙</button>
+        </div>
+        
+        <!-- Hero Section -->
+        <section class="text-center my-10">
+            <img src="https://via.placeholder.com/150" alt="Foto de Perfil" class="w-32 h-32 mx-auto rounded-full shadow-lg">
+            <h1 class="text-4xl font-bold mt-4">Tu Nombre</h1>
+            <p class="text-lg text-gray-600 dark:text-gray-400">Desarrollador Web | Especialista en UI/UX</p>
+        </section>
+        
+        <!-- Sobre Mí -->
+        <section class="my-8">
+            <h2 class="text-2xl font-bold border-b pb-2">Sobre Mí</h2>
+            <p class="mt-4">Soy un apasionado desarrollador web con experiencia en crear interfaces atractivas y funcionales...</p>
+        </section>
+        
+        <!-- Habilidades -->
+        <section class="my-8">
+            <h2 class="text-2xl font-bold border-b pb-2">Habilidades</h2>
+            <div class="flex flex-wrap gap-4 mt-4">
+                <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded">HTML</span>
+                <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded">CSS</span>
+                <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded">JavaScript</span>
+            </div>
+        </section>
+        
+        <!-- Experiencia -->
+        <section class="my-8">
+            <h2 class="text-2xl font-bold border-b pb-2">Experiencia</h2>
+            <ul class="mt-4 space-y-4">
+                <li><strong>Desarrollador Web</strong> - Empresa X (2022 - Actualidad)</li>
+                <li><strong>Diseñador UI/UX</strong> - Startup Y (2020 - 2022)</li>
+            </ul>
+        </section>
+        
+        <!-- Contacto -->
+        <section class="my-8">
+            <h2 class="text-2xl font-bold border-b pb-2">Contacto</h2>
+            <form class="mt-4">
+                <input type="text" placeholder="Nombre" class="w-full p-2 mb-2 rounded bg-gray-200 dark:bg-gray-700">
+                <input type="email" placeholder="Email" class="w-full p-2 mb-2 rounded bg-gray-200 dark:bg-gray-700">
+                <textarea placeholder="Mensaje" class="w-full p-2 mb-2 rounded bg-gray-200 dark:bg-gray-700"></textarea>
+                <button class="w-full bg-blue-500 text-white py-2 rounded">Enviar</button>
+            </form>
+        </section>
+        
+        <!-- Redes Sociales -->
+        <div class="flex justify-center gap-4 mt-6">
+            <a href="#" class="text-blue-500">LinkedIn</a>
+            <a href="#" class="text-gray-800 dark:text-gray-300">GitHub</a>
+            <a href="#" class="text-blue-400">Twitter</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('theme-toggle').addEventListener('click', function () {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('dark-mode', document.documentElement.classList.contains('dark') ? 'enabled' : 'disabled');
+        });
+    </script>
+</body>
+</html>
